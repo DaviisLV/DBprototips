@@ -7,7 +7,7 @@ public class generator : MonoBehaviour {
 
     public GameObject GroundPanel;
     public Transform Player;
-    private int radiusAroundPlayer = 2;
+    private int radiusAroundPlayer = 7;
     private float panelSizeX;
     private float panelSizeZ;
     private List<Vector3>  Grid = new List<Vector3>();
