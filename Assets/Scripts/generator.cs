@@ -28,14 +28,14 @@ public class generator : MonoBehaviour {
         {
             for (int x = -radiusAroundPlayer; x <= radiusAroundPlayer; x++)
             {
-                if (x * x + z * z < radiusAroundPlayer * radiusAroundPlayer)
-                {
+               // if (x * x + z * z < radiusAroundPlayer * radiusAroundPlayer)
+              //  {
                     plane = Instantiate(GroundPanel);         
                     plane.transform.position = new Vector3(startPosition.x + x * panelSizeX, 0, startPosition.z + z * panelSizeZ);
                                       
                     Grid.Add(new Vector3(startPosition.x + x * panelSizeX, 0, startPosition.z + z * panelSizeZ));
                     ActiveGameObjects.Add(plane);
-                }
+              //  }
             }
         }    
     }
@@ -48,11 +48,11 @@ public class generator : MonoBehaviour {
         {
             for (int x = -radiusAroundPlayer; x <= radiusAroundPlayer; x++)
             {
-                if (x * x + z * z < radiusAroundPlayer * radiusAroundPlayer)
-                {
-                   Vector3 vector = new Vector3(startPosition.x + (gridPosition.x * panelSizeX) + x * panelSizeX, 0, startPosition.z + (gridPosition.z * panelSizeZ) + z * panelSizeZ);
+             //   if (x * x + z * z < radiusAroundPlayer * radiusAroundPlayer)
+              //  {
+                   Vector3 vector = new Vector3(startPosition.x + (gridPosition.x * panelSizeX) + (x * panelSizeX), 0, startPosition.z + (gridPosition.z * panelSizeZ) + (z * panelSizeZ));
                     newCoordinates.Add(vector);           
-                }
+              //  }
             }
         }      
         return newCoordinates;
@@ -81,7 +81,7 @@ public class generator : MonoBehaviour {
         Debug.Log("jaunas");
         foreach (var position in positionsToGenerate)
         {
-           // Debug.Log(position);
+            Debug.Log(position);
             add(position);
         }
 
